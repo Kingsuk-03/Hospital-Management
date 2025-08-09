@@ -11,7 +11,7 @@ public class HospitalManagement {
         int choice;
 
         do {
-            System.out.println("Hospital Management System");
+            System.out.println("\nHospital Management System");
             System.out.println("1. Add Patient");
             System.out.println("2. Add Doctor");
             System.out.println("3. Schedule Appointment");
@@ -62,7 +62,6 @@ public class HospitalManagement {
 
         Patient patient = new Patient(name, age, gender);
         patients.add(patient);
-
         System.out.println("Patient added successfully!");
     }
 
@@ -74,7 +73,6 @@ public class HospitalManagement {
 
         Doctor doctor = new Doctor(name, specialty);
         doctors.add(doctor);
-
         System.out.println("Doctor added successfully!");
     }
 
@@ -99,21 +97,21 @@ public class HospitalManagement {
     }
 
     private static void viewPatients() {
-        System.out.println("List of Patients:");
+        System.out.println("\nList of Patients:");
         for (Patient patient : patients) {
             System.out.println(patient);
         }
     }
 
     private static void viewDoctors() {
-        System.out.println("List of Doctors:");
+        System.out.println("\nList of Doctors:");
         for (Doctor doctor : doctors) {
             System.out.println(doctor);
         }
     }
 
     private static void viewAppointments() {
-        System.out.println("List of Appointments:");
+        System.out.println("\nList of Appointments:");
         for (Appointment appointment : appointments) {
             System.out.println(appointment);
         }
@@ -135,75 +133,5 @@ public class HospitalManagement {
             }
         }
         return null;
-    }
-}
-
-
-
-public class Patient {
-    private static int idCounter = 1;
-    private int id;
-    private String name;
-    private int age;
-    private String gender;
-
-    public Patient(String name, int age, String gender) {
-        this.id = idCounter++;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    @Override
-    public String toString() {
-        return "Patient ID: " + id + ", Name: " + name + ", Age: " + age + ", Gender: " + gender;
-    }
-}
-
-
-
-public class Doctor {
-    private static int idCounter = 1;
-    private int id;
-    private String name;
-    private String specialty;
-
-    public Doctor(String name, String specialty) {
-        this.id = idCounter++;
-        this.name = name;
-        this.specialty = specialty;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    @Override
-    public String toString() {
-        return "Doctor ID: " + id + ", Name: " + name + ", Specialty: " + specialty;
-    }
-}
-
-
-
-
-public class Appointment {
-    private Patient patient;
-    private Doctor doctor;
-    private String date;
-
-    public Appointment(Patient patient, Doctor doctor, String date) {
-        this.patient = patient;
-        this.doctor = doctor;
-        this.date = date;
-    }
-
-    @Override
-    public String toString() {
-        return "Appointment: [Patient: " + patient + ", Doctor: " + doctor + ", Date: " + date + "]";
     }
 }

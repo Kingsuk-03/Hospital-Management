@@ -1,6 +1,6 @@
 # Hospital Management System (Java)
 
-A simple **console-based** Hospital Management System written in Java.  
+A **console-based** Hospital Management System written in Java.  
 It allows you to manage **patients, doctors, and appointments**.
 
 ## 📌 Features

@@ -1,4 +1,4 @@
-# Hospital Management System (Java)
+# 🏥Hospital Management System (Java)
 
 A **console-based** Hospital Management System written in Java.  
 It allows you to manage **patients, doctors, and appointments**.
